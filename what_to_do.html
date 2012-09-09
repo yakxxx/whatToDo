@@ -1,0 +1,44 @@
+<head>
+  <title>what_to_do</title>
+</head>
+
+<body>
+    <div id="container">
+        {{> main}}
+    </div>
+</body>
+
+<template name="main">
+    {{#if join_room_route}}
+        {{> join_room}}
+    {{/if}}
+    {{#if in_room_route}}
+        {{> in_room}}
+    {{/if}}
+</template>
+
+
+<template name="join_room">
+    {{#unless user_id}}
+        <div id="fb-root"></div>
+        <div class="fb-login-button">Login with Facebook</div>
+    {{/unless}}
+    {{#if user_id}}
+    <h1>Join room</h1>
+    name : <input type="text" id="name" name="name" value="{{user.name}}" /><br />
+    room id: <input type="text" id="room_id" name="room_id" value="{{room_id_from_url}}"/><br />
+    <input type="button" name="join_btn" id="join_btn" value="Join" />
+    {{/if}}
+</template>
+
+<template name="in_room">
+	<input type="button" class="logout" value="logout" id="logout" /> <br />
+	Write: <input type="text" id="write" />
+	<input type="button" value="Go" id="go" />
+	you are in room: {{room_id}}<br />
+	logged as: {{user.name}} </br>
+	{{#each messages}}
+	
+	   {{author.name}}:{{content}}</br />
+	{{/each}}
+</template>
