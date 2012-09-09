@@ -11,8 +11,8 @@ var in_room = function(){
         };
         
         Template.in_room.events = {
-            'click .logout' : function(event, tpl){
-                console.log('LOGOUT');
+            'click .exit' : function(event, tpl){
+                console.log('Exit');
                 app_router.navigate('', {trigger: true});
             },
             'click #go' : function(event, tpl){

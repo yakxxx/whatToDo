@@ -1,0 +1,26 @@
+<template name="in_room">
+<div id="in_room">
+    <div id="top_bar">
+        you are in room: {{room_id}} logged as: {{user.name}} <input
+            type="button" class="exit" value="Exit room" />
+    </div>
+    <div id="content">
+        <div id="votes">votes</div>
+        <div id="chat">
+            <div id="chat_inner">
+                
+                {{#each messages}}
+                    {{author.name}}:{{content}}</br /> 
+                {{/each}}
+            </div>
+            <div id="write_bar">
+                Write: <input type="text" id="write" /> 
+                <input type="button" value="Go" id="go" />
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+</div>
+</template>

@@ -24,6 +24,9 @@ var AppRouter = Backbone.Router.extend({
   
   room: function() {
       Session.set('route', 'in_room');
+      if(!Session.get('room_id') || !Session.get('user_id')){
+          app_router.navigate("", {trigger: true});
+      }
       in_room();
       console.log('ROOM');
   }

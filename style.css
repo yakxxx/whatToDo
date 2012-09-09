@@ -1,0 +1,52 @@
+
+
+html, body{
+	margin: 0;
+	padding: 0;
+}
+
+.clear{
+	clear: both;
+}
+
+#container {
+	width:100%;
+}
+
+#in_room #top_bar {
+	height:60px;
+	width:100%;
+	position:absolute;
+	top:0;
+	border: 1px solid red;
+}
+
+#in_room #content {
+	margin: 60px auto 0 auto;
+	max-width: 1000px;
+	min-width: 600px;
+}
+
+#in_room #content #chat {
+	height: 100%;
+	margin-right: 250px;
+}
+
+#in_room #content #chat_inner {
+	border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+
+#in_room #content #votes {
+	float: right;
+	width: 250px;
+    border: 1px solid black;
+    min-height: 300px;
+	
+}
+
+
+#in_room #chat #write_bar {
+	border: 1px solid gray;
+}

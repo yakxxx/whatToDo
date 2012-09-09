@@ -1,0 +1,12 @@
+<template name="join_room">
+    {{#unless user_id}}
+        <div id="fb-root"></div>
+        <div class="fb-login-button">Login with Facebook</div>
+    {{/unless}}
+    {{#if user_id}}
+    <h1>Join room</h1>
+    name : <input type="text" id="name" name="name" value="{{user.name}}" /><br />
+    room id: <input type="text" id="room_id" name="room_id" value="{{room_id_from_url}}"/><br />
+    <input type="button" name="join_btn" id="join_btn" value="Join" />
+    {{/if}}
+</template>

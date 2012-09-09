@@ -1,0 +1,19 @@
+<head>
+    <meta charset="utf-8" />
+  <title>what_to_do</title>
+</head>
+
+<body>
+    <div id="container">
+        {{> main}}
+    </div>
+</body>
+
+<template name="main">
+    {{#if join_room_route}}
+        {{> join_room}}
+    {{/if}}
+    {{#if in_room_route}}
+        {{> in_room}}
+    {{/if}}
+</template>
